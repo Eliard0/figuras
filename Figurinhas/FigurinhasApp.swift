@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct FigurinhasApp: App {
     var body: some Scene {
+        var minhaColecao = MinhaColecao()
+        
         WindowGroup {
             ContentView()
+                .environmentObject(minhaColecao)
         }
     }
 }

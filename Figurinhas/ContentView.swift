@@ -17,7 +17,9 @@ struct ContentView: View {
                 Label ("Figurinhas", systemImage: "face.dashed")
             }
             
-            MinhaColecao()
+            NavigationView {
+                MinhaColecaoView()
+            }
                 .tabItem {
                     Label (
                         "Minha colecao",
@@ -30,4 +32,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(MinhaColecao())
 }

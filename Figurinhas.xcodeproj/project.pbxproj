@@ -13,9 +13,11 @@
 		E9314EDF2CA6F01600759037 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9314EDE2CA6F01600759037 /* Preview Assets.xcassets */; };
 		E9314F1A2CA7320400759037 /* PropriedadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9314F192CA7320400759037 /* PropriedadesView.swift */; };
 		E9314F1C2CA7346000759037 /* FiguraDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9314F1B2CA7346000759037 /* FiguraDetalheView.swift */; };
-		E9314F1E2CA7369900759037 /* MinhaColecao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9314F1D2CA7369900759037 /* MinhaColecao.swift */; };
 		E9314F202CA7374E00759037 /* ListaFigurasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9314F1F2CA7374E00759037 /* ListaFigurasView.swift */; };
 		E9314F252CA7416600759037 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E9314F242CA7416600759037 /* .gitignore */; };
+		E9314F272CAB134000759037 /* PropriedadeEditarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9314F262CAB134000759037 /* PropriedadeEditarView.swift */; };
+		E9314F292CAB16B000759037 /* ModeloDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9314F282CAB16B000759037 /* ModeloDados.swift */; };
+		E9314F2B2CAB33EF00759037 /* MinhaColecaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9314F2A2CAB33EF00759037 /* MinhaColecaoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +28,11 @@
 		E9314EDE2CA6F01600759037 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9314F192CA7320400759037 /* PropriedadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropriedadesView.swift; path = ../PropriedadesView.swift; sourceTree = "<group>"; };
 		E9314F1B2CA7346000759037 /* FiguraDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiguraDetalheView.swift; sourceTree = "<group>"; };
-		E9314F1D2CA7369900759037 /* MinhaColecao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhaColecao.swift; sourceTree = "<group>"; };
 		E9314F1F2CA7374E00759037 /* ListaFigurasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaFigurasView.swift; sourceTree = "<group>"; };
 		E9314F242CA7416600759037 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E9314F262CAB134000759037 /* PropriedadeEditarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadeEditarView.swift; sourceTree = "<group>"; };
+		E9314F282CAB16B000759037 /* ModeloDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDados.swift; sourceTree = "<group>"; };
+		E9314F2A2CAB33EF00759037 /* MinhaColecaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhaColecaoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				E9314F242CA7416600759037 /* .gitignore */,
+				E9314F282CAB16B000759037 /* ModeloDados.swift */,
 				E9314F1F2CA7374E00759037 /* ListaFigurasView.swift */,
-				E9314F1D2CA7369900759037 /* MinhaColecao.swift */,
 				E9314F1B2CA7346000759037 /* FiguraDetalheView.swift */,
 				E9314F192CA7320400759037 /* PropriedadesView.swift */,
+				E9314F262CAB134000759037 /* PropriedadeEditarView.swift */,
 				E9314ED72CA6F01500759037 /* FigurinhasApp.swift */,
 				E9314ED92CA6F01500759037 /* ContentView.swift */,
+				E9314F2A2CAB33EF00759037 /* MinhaColecaoView.swift */,
 				E9314EDB2CA6F01600759037 /* Assets.xcassets */,
 				E9314EDD2CA6F01600759037 /* Preview Content */,
 			);
@@ -154,11 +160,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9314F202CA7374E00759037 /* ListaFigurasView.swift in Sources */,
-				E9314F1E2CA7369900759037 /* MinhaColecao.swift in Sources */,
 				E9314EDA2CA6F01500759037 /* ContentView.swift in Sources */,
 				E9314ED82CA6F01500759037 /* FigurinhasApp.swift in Sources */,
+				E9314F272CAB134000759037 /* PropriedadeEditarView.swift in Sources */,
 				E9314F1C2CA7346000759037 /* FiguraDetalheView.swift in Sources */,
 				E9314F1A2CA7320400759037 /* PropriedadesView.swift in Sources */,
+				E9314F292CAB16B000759037 /* ModeloDados.swift in Sources */,
+				E9314F2B2CAB33EF00759037 /* MinhaColecaoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

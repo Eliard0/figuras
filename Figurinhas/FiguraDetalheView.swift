@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct FiguraDetalheView: View {
-    @State var itensNaColecao: Int = 0
+//    @State var itensNaColecao: Int = 0
+    @ObservedObject var figura: Figura
+    @EnvironmentObject var minhaColecao: MinhaColecao
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Mingle")
-                .font(.title)
-                .bold()
-                .padding()
             
             HStack {
                 Text("Frase: ")
@@ -23,13 +21,13 @@ struct FiguraDetalheView: View {
                     .bold()
                     .padding(.leading)
                 
-                Text("\"Problema em dobro\"")
-                    .font(.title)
+                Text("\"\(figura.frase)\"")
+//                    .font(.title)
             }
             
             HStack {
                 
-                Image("imagem01")
+                Image(figura.imagem)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 75)
@@ -37,8 +35,8 @@ struct FiguraDetalheView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    PropriedadesView()
-                    PropriedadesView(image: "bolt", nome: "Potencia", valor: "60%", cor: .yellow)
+                    PropriedadesView(valor: .constant(""),valorInt: $figura.vidas, valorDecimal: .constant(0), tipo: .numeroInteiro)
+                    PropriedadesView(image: "bolt", nome: "Potencia", valor: .constant(""), valorInt: .constant(0),valorDecimal: $figura.potencia, cor: .yellow, tipo: .numeroDecimal)
                     
                     
                 }
@@ -48,21 +46,21 @@ struct FiguraDetalheView: View {
             
             HStack {
                 Spacer()
-                Text("ola mais texto aleatorio")
+                Text(figura.descricao)
                 Spacer()
             }
             HStack {
                 Spacer()
                 Button(action: {
-                    itensNaColecao += 1
+                    minhaColecao.figuras.append(figura)
                 }, label: {
-                    if itensNaColecao == 0 {
-                        Text("Adicionar á coleção: \(itensNaColecao)")
+                    if minhaColecao.figuras.count == 0 {
+                        Text("Adicionar á coleção")
                             .padding()
                             .background(.blue)
                             .foregroundColor(.white)
                     }else{
-                        Text("Na sua coleção: \(itensNaColecao)")
+                        Text("Na sua coleção: \(minhaColecao.figuras.count)")
                             .padding()
                             .background(.green)
                             .foregroundColor(.white)
@@ -73,10 +71,14 @@ struct FiguraDetalheView: View {
             }.padding()
             
         }
+        .navigationTitle(
+            Text(figura.nome)
+        )
         Spacer()
     }
 }
 
 #Preview {
-    FiguraDetalheView()
+    FiguraDetalheView(figura: figuras[0])
+        .environmentObject(MinhaColecao())
 }
