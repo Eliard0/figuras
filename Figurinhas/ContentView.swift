@@ -14,7 +14,7 @@ struct ContentView: View {
                 ListaFigurasView()
             }
             .tabItem {
-                Label ("Figurinhas", systemImage: "face.dashed")
+                Label ("figurinhas", systemImage: "face.dashed")
             }
             
             NavigationView {
@@ -22,7 +22,7 @@ struct ContentView: View {
             }
                 .tabItem {
                     Label (
-                        "Minha colecao",
+                        "minhaColecao",
                         systemImage: "face.dashed"
                     )
                 }
